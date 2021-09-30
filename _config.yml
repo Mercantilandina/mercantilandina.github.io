@@ -1,0 +1,22 @@
+# Setup
+title:               Mercantil Andina
+tagline:             'Tech blog'
+description:         'Estamos transitando una transformación digital y te contamos nuestra experiencia.'
+url:                 https://mercantilandina.github.io
+baseurl:             ''
+paginate:            5
+permalink:           pretty
+
+# About/contact
+author:
+  name:              Mercantil Andina
+  url:               https://www.mercantilandina.com.ar
+  email:             https://wa.me/5491161656262
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+version:             0.0.1
+google_analytics_id: #UA-XXXX-Y
