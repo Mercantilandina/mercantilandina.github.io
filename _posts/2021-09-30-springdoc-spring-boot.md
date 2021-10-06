@@ -22,7 +22,7 @@ Incluimos la librería Springdoc en las dependencias del proyecto Maven, en el a
 
 A partir de aquí ya se activa el generador de documentación con la configuración básica. Si ejecutamos la aplicación podemos acceder al documento en la siguiente dirección:
 
-http://localhost:8080/swagger-ui.html
+[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
 ![Caputa de pantalla](https://raw.githubusercontent.com/Mercantilandina/springdoc-example/master/docs/2021-09-29_223550.png)
 
@@ -66,7 +66,7 @@ public class OpenAPIConfig {
 
 Por defecto esta librería escanea todos los controladores para catalogar los servicios y sus rutas. La información que se obtiene se puede enriquecer mediante anotaciones. 
 
-La anotación más importante es _@Operation_ que permite describir el servicio. El atributo _summary _contiene un resumen de la funcionalidad. Con _description_ podemos ampliar la definición del servicio.
+La anotación más importante es _@Operation_ que permite describir el servicio. El atributo _summary_ contiene un resumen de la funcionalidad. Con _description_ podemos ampliar la definición del servicio.
 
 Además un servicio puede tener una o más tipo de respuestas; estas se especifican con la anotación _@ApiResponses_. Indicamos una descripción, el código de estado y contenido. En la descripción del contenido se puede incluir varios ejemplos que pueden ilustrar los distintos tipos de respuesta.
 
@@ -128,7 +128,7 @@ Para organizar mejor nuestro código, y que quede más legible, es posible docum
 
 ## Esquemas
 
-Cada estructura de datos que componen los servicios se pueden anotar para extender la documentación con una descripción de cada uno de los atributos. La anotación que se utiliza es @Schema y se agrega en cada atributo de la clase. 
+Cada estructura de datos que componen los servicios se pueden anotar para extender la documentación con una descripción de cada uno de los atributos. La anotación que se utiliza es _@Schema_ y se agrega en cada atributo de la clase. 
 
 
 ```java
