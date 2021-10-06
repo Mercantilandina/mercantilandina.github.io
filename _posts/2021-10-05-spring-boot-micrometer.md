@@ -302,6 +302,8 @@ public class ImagenRepositoryMemory implements ImagenRepository {
 
 ### Ejemplo
 
+Dejamos una aplicación de ejemplo en [Github](https://github.com/Mercantilandina/spring-boot-micrometer).
+
 
 ### Referencias
 * [Documentación de Micrometer](https://micrometer.io/docs/concepts)
