@@ -21,7 +21,7 @@ Lo primero que necesitamos es agregar una dependencia en el archivo pom.xml
 
 Con este cambio se ejecuta Liquibase de forma automática al iniciar la aplicación. 
 
-Necesitamos hacer un ajuste más dado que por defecto el archivo principal de Liquibase lo busca en la siguiente ubicación: **db/changelog/db.changelog-master.yaml**. Podemos cambiar la cambiar la ubicación el archivo de configuración de Spring Boot application.yaml
+Necesitamos hacer un ajuste más dado que por defecto el archivo principal de Liquibase lo busca en la siguiente ubicación: **db/changelog/db.changelog-master.yaml**. Podemos cambiar la ubicación en el archivo de configuración de Spring Boot application.yaml
 
 
 ```yaml
