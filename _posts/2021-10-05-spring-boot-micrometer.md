@@ -6,7 +6,7 @@ title: Crear métricas con Prometheus y Micrometer
 Cuando desplegamos microservicios es muy importante obtener métricas que nos permitan en todo momento verificar que la aplicación tiene el comportamiento que esperamos. Para ello Micromenter nos ofrece por defecto una serie de métricas de base que nos permiten observar el estado de salud del servicio. Pero además podemos complementarlas con métricas personalizadas. Por ejemplo, obtenemos una medida que el servicio está consumiendo mucha memoria, sin embargo si tenemos una métrica que hay muchos usuarios conectados, el comportamiento es normal. Por lo tanto es aconsejable acompañar métricas personalizadas que nos permitan observar valores del sistema y de lógica de negocio. 
 
 
-### Instalar Actuator y Micrometer.
+## Instalar Actuator y Micrometer.
 En una aplicación de Spring Boot tenemos que incluir las siguientes dependencias en el archivo _pom.xml_ de Maven. 
 
 ```xml
@@ -38,7 +38,7 @@ Podemos acceder a los valores en la siguiente url:
 [http://localhost:8080/actuator/prometheus](http://localhost:8080/actuator/prometheus)
 
 
-### Crear un contador
+## Crear un contador
 
 Una medición muy básica es llevar la cuenta de un acontecimiento. Por ejemplo para medir la cantidad de altas de usuarios, la cantidad de emails enviados, cantidad de errores, etc. Para ello creamos un contador. 
 
@@ -91,7 +91,7 @@ moneda_cara_total
 Todos los contadores comienzan con el nombre que le hemos indicado y terminan con total y muestra el valor acumulado.
 
 
-### Medir tiempos de ejecución
+## Medir tiempos de ejecución
 
 Otra métrica muy útil es medir los tiempos de ejecución de una tarea, sobre todo para identificar aquellas que tardan demasiado. Por ejemplo podemos medir una consulta a la base de datos, la invocación a un servicio externo, completar un cálculo, procesar una imagen, etc. 
 
@@ -124,7 +124,7 @@ mensaje_lento_seconds_sum
 Registra el tiempo máximo, la cantidad de veces que se ha invocado y el tiempo total, en segundos. 
 
 
-### Medidas Gauge
+## Medidas Gauge
 
 Esta medición toma valores instantáneos de una magnitud que incrementa o disminuye su valor. Por ejemplo la cantidad de usuarios conectados en un chat, la cantidad de datos en un buffer, la temperatura, etc. 
 
@@ -168,7 +168,7 @@ numero_random
 
 
 
-### Distribución
+## Distribución
 
 A veces quizás no sea suficiente obtener un valor unitario de una medida, si no que necesitamos obtener mayor estadística. Entonces podemos obtener una distribución de medidas como un histograma donde cada valor obtenido se acumula en un segmento. Por ejemplo en un servicio de imágenes podemos segmentar el registro por su tamaño.
 
@@ -238,7 +238,7 @@ archivos_sizes_kilobytes_count
 archivos_sizes_kilobytes_sum 
 ```
 
-### Medir tiempos con anotaciones
+## Medir tiempos con anotaciones
 
 La asignación de métricas de tiempo se pueden simplificar si utilizamos anotaciones. Se pueden marcar los métodos que necesitamos medir con la anotación _@Timed_
 
@@ -300,10 +300,10 @@ public class ImagenRepositoryMemory implements ImagenRepository {
 
 
 
-### Ejemplo
+## Ejemplo
 
 Dejamos una aplicación de ejemplo en [Github](https://github.com/Mercantilandina/spring-boot-micrometer).
 
 
-### Referencias
+## Referencias
 * [Documentación de Micrometer](https://micrometer.io/docs/concepts)
